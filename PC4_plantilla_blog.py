@@ -96,7 +96,7 @@ col2.markdown(f"<div style='text-align: justify; font-size: 15px;'>{texto}</div>
 # ¿Qué te gustaría hacer con la programación en el futuro? 
 
 # Agregamos un subtítulo
-st.markdown("<h2 style='text-align: center;'>Mi experiencia aprendiendo a jalar</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center;'>Mi testimonio de vida</h2>", unsafe_allow_html=True)
 
 # <h2 style='text-align: center;'>Mi experiencia aprendiendo a programar 💻</h2>: Esta es una cadena de código HTML.
 # La etiqueta <h2> se utiliza para el encabezado secundario de una página web.
@@ -159,7 +159,7 @@ sidebar.markdown("<h1 style='text-align: center;'>Gráfico</h1>", unsafe_allow_h
 # El texto dentro de las etiquetas <h1> ("Los análisis de Ellie") es el contenido del encabezado.
 
 # Creamos una lista de gráficos
-graficos = ['Tarjetas rojas del Milan', 'Promedio de goles', 'Goles anotados']
+graficos = ['Tarjetas rojas como visitante', 'Promedio de goles como visitante', 'Goles anotados por el Milan']
 
 # Creamos un cuadro de selección en la barra lateral
 grafico_seleccionado = sidebar.selectbox('Selecciona un gráfico', graficos)
@@ -172,16 +172,16 @@ grafico_seleccionado = sidebar.selectbox('Selecciona un gráfico', graficos)
 # La función selectbox se utiliza para crear un cuadro de selección en la barra lateral.
 
 # Mostramos el gráfico seleccionado
-if grafico_seleccionado == 'Tarjetas rojas del Milan':
-    sidebar.markdown("<div style='text-align: justify; font-size: 20px;'>Aquí debe ir una breve interpretación de tu gráfico</div>", unsafe_allow_html=True)
-    sidebar.image("tarjetas rojas como visitante.jpeg", caption='Tarjetas rojas', width=500)
+if grafico_seleccionado == 'Tarjetas rojas como visitante':
+    sidebar.markdown("<div style='text-align: justify; font-size: 20px;'>Este es el gráfico de los equipos con más tarjetas rojas como visitante en la Liga italiana</div>", unsafe_allow_html=True)
+    sidebar.image("tarjetas rojas como visitante.jpeg", caption='Tarjetas rojas como visitante', width=500)
     pass
-elif grafico_seleccionado == 'Promedio de goles':
-    sidebar.markdown("<div style='text-align: justify'>Texto para la opción 2.</div>", unsafe_allow_html=True)
-    sidebar.image("prom_goles_de_visitante.jpeg", caption='Goles de visitante', width=500)
+elif grafico_seleccionado == 'Promedio de goles como visitante':
+    sidebar.markdown("<div style='text-align: justify'>En el gráfico se observa el promedio de goles anotados por el Milan como visita .</div>", unsafe_allow_html=True)
+    sidebar.image("prom_goles_de_visitante.jpeg", caption='Prom. goles de visitante', width=500)
     pass
-elif grafico_seleccionado == 'Goles anotados':
-    sidebar.markdown("<div style='text-align: justify'>Texto para la opción 3.</div>", unsafe_allow_html=True)
+elif grafico_seleccionado == 'Goles anotados por el Milan':
+    sidebar.markdown("<div style='text-align: justify'>En el cuadro se observa la la frecuencia de goles anotados por el Milan como local y como visitante.</div>", unsafe_allow_html=True)
     sidebar.image("frec. goles anotados por el milan.jpeg", caption='Goles anotados', width=500)
     pass
 
