@@ -139,7 +139,7 @@ st.markdown("<h2 style='text-align: center;'>Explicación de un tema de las clas
 
 
 # Agregamos un enlace a la página web donde está el video.
-enlace = f'<a href="https://drive.google.com/file/d/1O-F6XYVtR5dXQzws8Sn5TgTwSC6yfEYE/view?usp=drive_link" target="_blank"><button>Nombre creativo para el botón</button></a>'
+enlace = f'<a href="https://drive.google.com/file/d/1O-F6XYVtR5dXQzws8Sn5TgTwSC6yfEYE/view?usp=drive_link" target="_blank"><button>Botón de la sabiduría</button></a>'
 st.markdown(enlace, unsafe_allow_html=True)
 # f'<a href="URL" target="_blank"><button>Nombre</button></a>':
 # La etiqueta <a> se utiliza para crear un enlace en HTML.
