@@ -40,7 +40,7 @@ sidebar = st.sidebar
 # Pero, a diferencia de st.markdown, el texto estará alineado a la izquierda y no podrás cambiar el color del texto.
 
 # La función st.markdown permite centrar y agrandar la letra del título de la web en Streamlit.
-st.markdown("<h1 style='text-align: center;'>Intento de página</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Biografía Pablo Sandoval</h1>", unsafe_allow_html=True)
 
 # <h1 style='text-align: center;'>Nombre de tu blog</h1>: Esto es una cadena de código HTML. 
 # La etiqueta <h1> se utiliza para el encabezado principal de una página web, y 
@@ -72,7 +72,8 @@ col1.image("prom_goles_de_visitante.jpeg", caption='terrible estadística', widt
 # Deben presentarse: ¿Quién eres?, ¿De dónde eres?, ¿Qué estudias?, ¿Qué te gusta de tu carrera?, 
 # ¿Qué te gustaría hacer en el futuro?, ¿Qué te gusta hacer en tu tiempo libre?
 
-texto = """Desde aqui 
+texto = """Soy Pablo Sandoval, estudio periodismo en la PUCP. Lo que más me gusta de mi carrera es la diversidad de temas que puedo tocar, la cercanía con la gente, y el conocimiento de nuevas realidades. En el futuro me gustaría estudiar otra carrera y trabajar en un medio independiente. En mi tiempo libre me gusta tocar la guitarra, leer y ver películas.
+ 
 """
 
 # Las comillas triples (""") en Python se utilizan para definir cadenas multilínea.
@@ -108,7 +109,8 @@ st.markdown("<h2 style='text-align: center;'>Mi experiencia aprendiendo a jalar<
 
 # Agregar un  texto para la respuesta
 texto_2 = """
-aca debería escribir"""
+Sentí curiosidad en un principio por entrar a un área en el que nunca antes había estado. Me enseñó a pensar de una manera más minuciosa en lo que respecta a un sistema que parece simple pero que no lo es. Me gusta la manera en la que se puede lograr gráficos con datos. Por otro lado, lo que menos me gusta es la forma difícil de ensamblar en la cual por solo un espacio puede no funcionar todo el comando. En el futuro me gustaría hacer páginas que recopile información de interés nacional.
+"""
 
 # Mostramos el texto
 st.markdown(f"<div style='text-align: justify; font-size: 15px;'>{texto_2}</div>", unsafe_allow_html=True)
@@ -132,12 +134,12 @@ st.markdown("<h2 style='text-align: center;'>Explicación de un tema de las clas
 # unsafe_allow_html=True: Este es un argumento opcional en la función markdown.
 
 # Agregamos un video a la aplicación web ( menor a 20 MB)
-st.video("ppc-2024-1.mp4")
+# st.video("ppc-2024-1.mp4")
 # st.video("ppc-2024-1.mp4"): Esta línea está agregando un video a la aplicación web.
 
 
 # Agregamos un enlace a la página web donde está el video.
-enlace = f'<a href="https://drive.google.com/file/d/1CbCTv4EFV5G5XH7rOpIcPmjKr23Muojs/view?usp=drive_link" target="_blank"><button>Nombre creativo para el botón</button></a>'
+enlace = f'<a href="https://drive.google.com/file/d/1O-F6XYVtR5dXQzws8Sn5TgTwSC6yfEYE/view?usp=drive_link" target="_blank"><button>Nombre creativo para el botón</button></a>'
 st.markdown(enlace, unsafe_allow_html=True)
 # f'<a href="URL" target="_blank"><button>Nombre</button></a>':
 # La etiqueta <a> se utiliza para crear un enlace en HTML.
@@ -149,7 +151,7 @@ st.markdown(enlace, unsafe_allow_html=True)
 
 
 # Agregamos un subtítulo en la barra lateral
-sidebar.markdown("<h1 style='text-align: center;'>Aquí escribe un nombre creativo para presentar tus gráficos</h1>", unsafe_allow_html=True)
+sidebar.markdown("<h1 style='text-align: center;'>Gráfico</h1>", unsafe_allow_html=True)
 
 # <h1 style='text-align: center;'>Los análisis de Ellie</h1>: Esta es una cadena de código HTML.
 # La etiqueta <h1> se utiliza para el encabezado principal de una página web.
@@ -157,7 +159,7 @@ sidebar.markdown("<h1 style='text-align: center;'>Aquí escribe un nombre creati
 # El texto dentro de las etiquetas <h1> ("Los análisis de Ellie") es el contenido del encabezado.
 
 # Creamos una lista de gráficos
-graficos = ['Lenguas aisladas', 'Familias lingüísticas', 'Mapa de las lenguas sudamericanas']
+graficos = ['Tarjetas rojas del Milan', 'Promedio de goles', 'Goles anotados']
 
 # Creamos un cuadro de selección en la barra lateral
 grafico_seleccionado = sidebar.selectbox('Selecciona un gráfico', graficos)
@@ -170,17 +172,17 @@ grafico_seleccionado = sidebar.selectbox('Selecciona un gráfico', graficos)
 # La función selectbox se utiliza para crear un cuadro de selección en la barra lateral.
 
 # Mostramos el gráfico seleccionado
-if grafico_seleccionado == 'Lenguas aisladas':
+if grafico_seleccionado == 'Tarjetas rojas del Milan':
     sidebar.markdown("<div style='text-align: justify; font-size: 20px;'>Aquí debe ir una breve interpretación de tu gráfico</div>", unsafe_allow_html=True)
-    sidebar.image("aisladas_base_datos.png", caption='Lenguas aisladas', width=500)
+    sidebar.image("tarjetas rojas como visitante.jpeg", caption='Tarjetas rojas', width=500)
     pass
-elif grafico_seleccionado == 'Familias lingüísticas':
+elif grafico_seleccionado == 'Promedio de goles':
     sidebar.markdown("<div style='text-align: justify'>Texto para la opción 2.</div>", unsafe_allow_html=True)
-    sidebar.image("lengua_familia_GB.png", caption='Familias lingüísticas', width=500)
+    sidebar.image("prom_goles_de_visitante.jpeg", caption='Goles de visitante', width=500)
     pass
-elif grafico_seleccionado == 'Mapa de las lenguas sudamericanas':
+elif grafico_seleccionado == 'Goles anotados':
     sidebar.markdown("<div style='text-align: justify'>Texto para la opción 3.</div>", unsafe_allow_html=True)
-    sidebar.image("mapa_familias_aisladas_S.jpg", caption='Mapa de las lenguas sudamericanas', width=500)
+    sidebar.image("frec. goles anotados por el milan.jpeg", caption='Goles anotados', width=500)
     pass
 
 # if grafico_seleccionado == 'Gráfico de Macroareas': Esta línea verifica si la opción seleccionada es 'Gráfico de Macroareas'.
